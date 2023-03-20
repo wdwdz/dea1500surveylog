@@ -1,0 +1,127 @@
+usernetid,type:1. all high; 2. all low; 3. increase; 4. decrease; 5. others,t1_be,t2_be,t3_be,t4_be,t1_cog,t2_cog,t3_cog,t4_cog,t1_emo,t2_emo,t3_emo,t4_emo,t1_soc,t2_soc,t3_soc,t4_soc,logsum,interview,postsum,comsum
+rmb358,1,5,5,5,5,4.333333333,5,5,5,4.666666667,5,5,5,5,5,5,5,165,I am not willing to participate in the interview,11,20
+ecs273,3,5,5,5,5,4,4.166666667,5,5,4,4.333333333,4.555555556,5,4.25,5,4.666666667,4.5,85,I am not willing to participate in the interview,8,14
+cml324,1,4.5,5,5,5,4.333333333,4.333333333,4.333333333,4.666666667,4,4.333333333,4,4,4.5,4.5,4.5,5,148,I am willing to participate in the interview and will receive a $10 Amazon card,11,18
+mrm397,5,5,5,5,5,4.666666667,4,4.333333333,4.666666667,4,4,4,4,4,4,4,4,82,I am willing to participate in the interview and will receive a $10 Amazon card,11,20
+jz485,2,3.333333333,3.166666667,3,3.5,3.333333333,3.333333333,4,3.5,3,2.888888889,3.166666667,3.333333333,3.333333333,3.5,3.75,3.5,87,I am willing to participate in the interview and will receive a $10 Amazon card,13,18
+eay28,1,4.5,4.5,4,4,5,5,5,5,4.666666667,4.666666667,4.666666667,4.666666667,5,5,4.5,5,106,I am willing to participate in the interview and will receive a $10 Amazon card,10,16
+mak448,5,3.5,4,3,4,3.333333333,2.666666667,3,4,3.666666667,3,3,4,4,3.5,3,4,171,I am not willing to participate in the interview,10,16
+sls495,,4,NA,NA,4.5,4,NA,NA,4.666666667,3.666666667,NA,NA,4,4,NA,NA,5,99,I am willing to participate in the interview and will receive a $10 Amazon card,11,20
+ggg48,,NA,NA,NA,3.5,NA,NA,NA,4,NA,NA,NA,2.666666667,NA,NA,NA,4,22,I am willing to participate in the interview and will receive a $10 Amazon card,3,7
+rgh227,5,3.5,4,3,4,4,4,3,4,3.666666667,3.333333333,3,3.333333333,1.5,4,3,2,89,I am not willing to participate in the interview,10,16
+jhz23,1,5,4,4,4.5,4.333333333,4,4.333333333,5,3.666666667,3.666666667,4,4.333333333,4,4,4,4,84,I am not willing to participate in the interview,9,16
+jcy54,1,5,5,5,5,4.666666667,4.333333333,4.666666667,4.333333333,4.333333333,4.333333333,4.333333333,4.333333333,4,4.5,4.5,4,118,I am not willing to participate in the interview,8,14
+jg2252,1,5,5,5,5,5,5,5,5,3.666666667,5,5,4.333333333,5,5,4,4.5,92,I am not willing to participate in the interview,10,19
+dgh82,5,4,4,4.5,4,3.5,4,4,4,3.166666667,4,3.666666667,4.666666667,2.5,4,3,3.5,86,I am willing to participate in the interview and will receive a $10 Amazon card,11,20
+jrd327,1,5,4.5,5,5,4.333333333,4,4,4.666666667,4,4,4,5,4.5,4.5,4,4.5,86,I am not willing to participate in the interview,11,18
+fs369,,3.5,4,3.5,3,3.666666667,3.666666667,3.333333333,3.666666667,2.666666667,3.666666667,3,3,2.5,4,3,4,93,I am not willing to participate in the interview,9,17
+alm384,,5,5,5,5,5,5,5,5,4,4,4.333333333,4.333333333,4,4,4,3.5,133,I am not willing to participate in the interview,12,20
+hes222,,4.5,4.75,5,5,3,4.166666667,4.666666667,4.666666667,3.333333333,2.833333333,3.666666667,4,4,4,4,4,94,I am not willing to participate in the interview,8,16
+rnp36,,5,5,5,5,5,5,5,5,5,4.333333333,4.666666667,5,5,4,4,5,114,I am willing to participate in the interview and will receive a $10 Amazon card,11,20
+akw67,,NA,4,4,4.5,NA,4.333333333,4.333333333,5,NA,4.333333333,4,5,NA,3.5,4,4,95,I am willing to participate in the interview and will receive a $10 Amazon card,9,15
+mm2577,,4.5,5,5,5,4.666666667,5,5,5,3.666666667,4.111111111,3.666666667,5,4.5,5,5,5,112,I am willing to participate in the interview and will receive a $10 Amazon card,11,17
+jk2384,,3.75,3.5,4,3.5,4,4,4,4,4,3.666666667,4,4,3,3,2.5,3.5,67,I am not willing to participate in the interview,9,17
+ab2457,,5,4,NA,5,5,4.333333333,NA,5,NA,5,NA,3.666666667,5,4,NA,5,97,I am willing to participate in the interview and will receive a $10 Amazon card,5,6
+cho35,,5,NA,NA,5,4,NA,NA,4,4,NA,NA,4.333333333,5,NA,NA,5,73,I am not willing to participate in the interview,10,18
+mvs38,,4.5,5,NA,5,4.666666667,5,NA,5,4.333333333,5,NA,5,4.5,5,NA,5,76,I am willing to participate in the interview and will receive a $10 Amazon card,8,18
+nam97,,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,68,I am not willing to participate in the interview,11,23
+kv245,,4.666666667,4,5,5,4.333333333,4,4.333333333,4.666666667,3.888888889,4.333333333,4,4.333333333,3,2.5,3,3,110,I am willing to participate in the interview and will receive a $10 Amazon card,11,22
+sjw258,,4,4,4,4,4.333333333,3.666666667,4,4.666666667,2.333333333,4,5,4,4,3.5,4,4,119,"I am willing to participate in the interview and a ""thank you"" is enough",13,23
+smf267,,4,NA,4,4.5,3.666666667,NA,4,4,2.666666667,NA,3,3,3.5,NA,4,4,62,I am not willing to participate in the interview,8,14
+mtq6,,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,132,I am not willing to participate in the interview,12,24
+smg377,,5,4.5,4.5,4,5,4.666666667,4.666666667,4.666666667,3.333333333,4,4,3.333333333,4.5,4.5,3.5,3.5,257,I am not willing to participate in the interview,12,20
+msr268,,5,5,3.5,4.5,5,4.333333333,4.333333333,4,4.833333333,4.666666667,5,5,5,5,4,5,126,I am willing to participate in the interview and will receive a $10 Amazon card,14,21
+mbh222,,3.5,3,3,3,3.833333333,3.666666667,3.666666667,4.666666667,2.666666667,3,3.333333333,3.333333333,3.5,3.5,2,3.5,169,I am willing to participate in the interview and will receive a $10 Amazon card,13,23
+sd697,,4,5,5,5,3.666666667,4.333333333,4.333333333,4.666666667,4,4.333333333,4,4.333333333,4,5,3.5,4.5,83,I am not willing to participate in the interview,13,21
+tma62,,5,5,5,5,4.666666667,4,5,5,4.333333333,5,5,5,5,5,5,5,72,I am not willing to participate in the interview,13,20
+tdf38,,5,NA,NA,5,5,NA,NA,5,5,NA,NA,4.666666667,4,NA,NA,5,148,I am willing to participate in the interview and will receive a $10 Amazon card,11,20
+dmf236,,NA,1,4,5,NA,1.666666667,3.666666667,3.666666667,NA,2,3,4,NA,2,4,5,86,I am not willing to participate in the interview,8,14
+esc82,,5,5,5,5,5,4.666666667,4.666666667,4.333333333,4.333333333,4,4.333333333,4.666666667,4,4.5,4.5,4,110,I am not willing to participate in the interview,12,20
+hys22,,5,5,5,5,4.666666667,5,5,5,4.666666667,5,5,5,4,5,4,4,68,I am not willing to participate in the interview,11,18
+lc739,,5,4,4,4,5,4,3.333333333,4.666666667,4.333333333,3.333333333,3,3.333333333,3,4,4,4,46,I am not willing to participate in the interview,4,8
+jor22,,3,4,NA,4,4,5,NA,5,3,4.333333333,NA,3.333333333,4,4,NA,4,179,I am not willing to participate in the interview,12,22
+dgh83,,5,5,5,3.5,5,5,4.333333333,4,5,3.666666667,5,3.666666667,5,5,3,3,124,I am willing to participate in the interview and will receive a $10 Amazon card,12,21
+xw593,,4.5,3.5,NA,4,4.666666667,4.333333333,NA,4.333333333,4,4,NA,4,5,3.5,NA,3,84,I am not willing to participate in the interview,11,20
+na427,,NA,NA,5,5,NA,NA,4.333333333,5,NA,NA,4.666666667,4,NA,NA,3.5,3.5,73,I am not willing to participate in the interview,12,20
+jw832,,4.5,4.5,4.5,5,4,5,4.666666667,5,3,3.666666667,3.666666667,5,4,4,4.5,5,101,I am not willing to participate in the interview,10,19
+ay283,,5,5,5,5,4.666666667,4.333333333,5,5,4.666666667,4.333333333,4.333333333,4.666666667,5,5,4.5,5,142,I am willing to participate in the interview and will receive a $10 Amazon card,11,18
+mc2594,,NA,4.25,4.5,4.5,NA,4.333333333,5,5,NA,4,4.333333333,4,NA,4.5,5,5,82,I am willing to participate in the interview and will receive a $10 Amazon card,12,20
+yt584,,4,NA,NA,4,4,NA,NA,4,4,NA,NA,4,4,NA,NA,4,53,I am willing to participate in the interview and will receive a $10 Amazon card,8,12
+pl623,,5,5,NA,5,5,5,NA,5,5,5,NA,5,5,5,NA,5,48,I am not willing to participate in the interview,8,13
+bt283,,5,5,5,4.5,4,4.833333333,5,4.666666667,4,4.666666667,4.666666667,4.666666667,4,4.75,4,3.5,135,I am not willing to participate in the interview,15,22
+cs2338,,4,4,4,4,3.333333333,3.666666667,4,4,4,4,3.333333333,3.333333333,3.5,3.5,3.5,3.5,161,"Others, please specify",12,20
+eam358,,5,5,5,5,5,5,4.666666667,4.666666667,5,5,5,4.666666667,5,4.5,4,4,145,I am not willing to participate in the interview,12,25
+ama386,,4,4.5,5,4.5,4.666666667,4.333333333,4.666666667,5,4,4,4,4.333333333,3.5,3.5,2.5,3.5,136,I am not willing to participate in the interview,12,22
+ajk276,,4.5,4.5,3.5,4,4.666666667,3.333333333,4.333333333,3.666666667,3.666666667,3.666666667,3.333333333,4,4,3.5,5,5,152,I am not willing to participate in the interview,11,20
+jta52,,5,5,5,5,5,5,5,5,4.666666667,4.666666667,3.666666667,5,5,5,5,5,182,"Others, please specify",11,20
+cjy27,,5,5,5,5,5,5,5,5,4.666666667,5,5,5,2,4,4,2,93,I am willing to participate in the interview and will receive a $10 Amazon card,11,21
+ep443,,4.5,4.5,4.5,4,3.666666667,4,5,4.333333333,3.666666667,4.333333333,4.666666667,4.666666667,3.5,4,4,3.5,208,I am willing to participate in the interview and will receive a $10 Amazon card,12,19
+nae36,,4,5,5,5,4.333333333,5,5,5,4.166666667,4.666666667,4.666666667,4.666666667,2.75,3.5,4,4,128,I am not willing to participate in the interview,12,23
+xz283,,3.25,2,NA,3,4,2,NA,3.333333333,3.166666667,2.666666667,NA,4,4,2,NA,4,88,"I am willing to participate in the interview and a ""thank you"" is enough",10,12
+crd229,,4.833333333,4.5,4.25,4,4.444444444,4,4.666666667,4,3.888888889,4,4,3.333333333,3.166666667,2,2.5,2,89,I am willing to participate in the interview and will receive a $10 Amazon card,10,12
+llw62,,3.75,3.5,3,4,4.666666667,5,4,5,3.833333333,3.666666667,3.666666667,3,3,3,2.5,3.5,96,I am not willing to participate in the interview,12,22
+jrk297,,5,NA,4,4,4.333333333,NA,4,4,3.333333333,NA,4,3.333333333,4,NA,4,4,143,I am not willing to participate in the interview,8,19
+wc465,,4.5,4,5,4,4,4,4.333333333,4,4,4,4,4,4,4,4,4,202,I am not willing to participate in the interview,11,20
+ceb338,,4,4,4.5,5,3.666666667,4,4.333333333,5,3,3.333333333,3.666666667,4,4,3.5,4,4,56,I am not willing to participate in the interview,7,14
+ic277,,5,5,4.5,5,4.833333333,5,5,4.666666667,5,5,5,4.666666667,5,5,5,4.5,190,I am willing to participate in the interview and will receive a $10 Amazon card,12,23
+iym4,,4.5,4,5,4,4.666666667,5,5,5,4,4,4,4,4,4,4,4,68,I am not willing to participate in the interview,12,20
+jj526,,4,4.5,4,4,5,4,5,5,3.333333333,4,3.666666667,4,3.5,3.5,4,4,83,I am not willing to participate in the interview,11,20
+yis5,,4,NA,4,4,4,NA,4,4,3,NA,3.666666667,3.666666667,4,NA,3,4,164,I am not willing to participate in the interview,11,22
+lsg85,,NA,4.5,5,5,NA,3.333333333,4,4,NA,4,4,4.333333333,NA,4.5,5,4.5,462,I am not willing to participate in the interview,10,23
+ac2332,,4,NA,4,4,4,NA,4,4,3.666666667,NA,3.666666667,3.666666667,4,NA,4,3.5,52,I am not willing to participate in the interview,11,18
+yl3262,,3.833333333,4,3.5,4,3.444444444,3.333333333,4,3.5,2.666666667,3,2.333333333,3.166666667,3.5,3,3.5,3.5,101,I am willing to participate in the interview and will receive a $10 Amazon card,9,17
+cjp222,,4,NA,4,4,4,NA,5,5,4,NA,4,4,4,NA,4.5,4,132,I am not willing to participate in the interview,13,19
+emf227,,NA,4,5,5,NA,5,5,5,NA,4,4,4,NA,3.5,5,5,60,I am not willing to participate in the interview,9,12
+mkc232,,NA,5,NA,5,NA,4.333333333,NA,4.333333333,NA,3.666666667,NA,3.666666667,NA,4,NA,5,85,I am willing to participate in the interview and will receive a $10 Amazon card,11,18
+si226,,4.5,4,NA,3.5,5,2.666666667,NA,3.666666667,4.333333333,2.333333333,NA,4,4.5,4,NA,4,182,I am not willing to participate in the interview,14,20
+kmt224,,NA,3.5,3.5,4,NA,4.666666667,4,4.666666667,NA,3.666666667,4,4.333333333,NA,4,3.5,4,80,I am willing to participate in the interview and will receive a $10 Amazon card,7,12
+kl983,,4,4,4,4,4.333333333,4.666666667,4.666666667,4.333333333,4,3.666666667,3.333333333,4,4,4,4,4.5,59,I am not willing to participate in the interview,10,18
+jms834,,3.5,3.5,3.5,4,3.666666667,4,4,4,3.333333333,3.333333333,3.666666667,3,3,3.5,3,2,138,I am not willing to participate in the interview,11,20
+lyl26,,4.5,4.5,4,4,4,4,4,4,4,3.666666667,4,4,4,4,4,4,116,I am not willing to participate in the interview,13,20
+vas57,,4.5,5,5,5,4,5,5,5,3.333333333,4.666666667,4.333333333,5,5,5,5,5,115,I am willing to participate in the interview and will receive a $10 Amazon card,12,19
+eew64,,4,4.5,3.5,3.5,3.666666667,4,4.333333333,4,4,2.333333333,3.333333333,3,1,1.5,4,1.5,127,"Others, please specify",10,21
+ajk275,,4,4,4,4,4,4,3.333333333,4,3.333333333,3.666666667,3.333333333,3.333333333,4,4,4,2,61,I am willing to participate in the interview and will receive a $10 Amazon card,10,14
+jx235,,NA,5,5,4.5,NA,4.333333333,4.666666667,5,NA,2,5,4.333333333,NA,4.5,5,5,109,I am not willing to participate in the interview,9,13
+aqg4,,4.5,4,5,4.5,4,4,4,4,4,3.333333333,4,4,4,4,4.5,4.5,61,I am willing to participate in the interview and will receive a $10 Amazon card,8,12
+kad279,,NA,NA,NA,4.5,NA,NA,NA,5,NA,NA,NA,5,NA,NA,NA,3,68,I am willing to participate in the interview and will receive a $10 Amazon card,8,7
+sn528,,4.75,5,4,4,3.833333333,4,4,4.666666667,4.166666667,4,4,4,4,4,3,4,114,I am willing to participate in the interview and will receive a $10 Amazon card,11,20
+jrr356,,NA,NA,NA,5,NA,NA,NA,5,NA,NA,NA,5,NA,NA,NA,4,105,I am not willing to participate in the interview,8,16
+dmf233,,4.5,5,5,5,4.333333333,4.666666667,4.333333333,4.333333333,4,4.333333333,5,5,3.5,4,4,4,134,I am willing to participate in the interview and will receive a $10 Amazon card,14,22
+rw648,,4,3.5,NA,4.5,3.666666667,4.333333333,NA,4,3.666666667,3.333333333,NA,4.333333333,5,3.5,NA,3.5,78,I am willing to participate in the interview and will receive a $10 Amazon card,8,12
+gme35,,5,5,5,5,5,5,5,5,5,3.666666667,3.666666667,4.333333333,5,5,5,5,169,I am willing to participate in the interview and will receive a $10 Amazon card,11,16
+arb338,,5,5,5,5,4.333333333,5,5,5,4.666666667,5,5,5,4.5,4.5,5,4.5,137,I am not willing to participate in the interview,11,21
+cql2,,4,3.5,4,4,4,3.666666667,4,4,3.333333333,4,3.666666667,4,2,3,4,4,96,I am not willing to participate in the interview,12,20
+ajm454,,4.5,NA,NA,4,4.666666667,NA,NA,4,4,NA,NA,3.666666667,4,NA,NA,3.5,14,I am not willing to participate in the interview,2,2
+ect62,,NA,4.5,NA,4.5,NA,4.666666667,NA,5,NA,4.333333333,NA,4.333333333,NA,4.5,NA,4.5,106,I am not willing to participate in the interview,4,6
+nrb84,,5,5,5,5,5,5,5,5,5,5,5,5,5,4.5,5,5,105,I am not willing to participate in the interview,9,16
+rn262,,4,4,NA,4,2.666666667,3.666666667,NA,4,2,3.666666667,NA,4,4,4,NA,4,111,I am willing to participate in the interview and will receive a $10 Amazon card,13,20
+dl963,,4.5,5,5,4.75,5,4.666666667,4.666666667,5,4,4,5,4.333333333,4,4.5,5,5,157,I am willing to participate in the interview and will receive a $10 Amazon card,11,20
+shl235,,NA,3.5,3,4,NA,3.5,3,4,NA,3.666666667,3,3.666666667,NA,3.5,3,4,169,I am not willing to participate in the interview,10,19
+dmk289,,5,5,5,5,4.666666667,5,4.666666667,4.666666667,4,4,4.333333333,4.666666667,5,5,4,4,104,I am not willing to participate in the interview,7,12
+jc2539,,5,NA,5,5,5,NA,5,5,5,NA,4.666666667,5,4,NA,4,4,85,I am not willing to participate in the interview,12,24
+plz8,,4.5,2.5,4,3,4.333333333,4,4.666666667,3.333333333,3.666666667,3.666666667,3.666666667,2.666666667,2,3,3.5,1.5,85,I am willing to participate in the interview and will receive a $10 Amazon card,11,19
+hr262,,NA,NA,4.5,4.5,NA,NA,4.666666667,4,NA,NA,4.333333333,4.333333333,NA,NA,4.5,3.5,101,I am not willing to participate in the interview,9,16
+mrl253,,5,4.5,4.5,4.5,4.666666667,4.666666667,4.666666667,4,4.666666667,4.666666667,4,3.333333333,5,4.5,4,3,85,I am not willing to participate in the interview,10,18
+gl496,,NA,4,NA,4,NA,4,NA,4,NA,3.666666667,NA,2.666666667,NA,4,NA,4,51,I am not willing to participate in the interview,4,6
+ave23,,4.5,4.5,4.5,5,5,5,5,5,4.333333333,4.333333333,4.333333333,4,5,4,3.5,4.5,133,I am not willing to participate in the interview,11,18
+jcl356,,4,NA,4.5,4.5,4.333333333,NA,4.666666667,4.666666667,4.333333333,NA,4,4.333333333,4,NA,3.5,4,95,I am willing to participate in the interview and will receive a $10 Amazon card,14,19
+mnr34,,4.5,4.5,4.5,4,4.666666667,4.666666667,5,4.666666667,4,4.333333333,4,4,4.5,4.5,4.5,4,175,I am not willing to participate in the interview,12,23
+ly375,,5,4.5,4.5,4.5,4.666666667,4.333333333,4.666666667,4.333333333,4,4,4,4,4,3,3.5,4,85,I am willing to participate in the interview and will receive a $10 Amazon card,13,18
+ese47,,4,4,4,4,4,4,4,4,3,3.333333333,3.333333333,3.666666667,4,3.5,3.5,4,61,I am willing to participate in the interview and will receive a $10 Amazon card,9,14
+wy87,,NA,4,NA,5,NA,4.333333333,NA,5,NA,3.666666667,NA,5,NA,4,NA,5,98,"I am willing to participate in the interview and a ""thank you"" is enough",13,22
+rls457,,NA,3,2,2,NA,3.666666667,3,3.666666667,NA,2.333333333,1.333333333,2.333333333,NA,1.5,2.5,3,36,I am willing to participate in the interview and will receive a $10 Amazon card,4,6
+sk2529,,NA,NA,NA,5,NA,NA,NA,5,NA,NA,NA,4,NA,NA,NA,4.5,96,I am willing to participate in the interview and will receive a $10 Amazon card,8,14
+mcd237,,NA,5,4.5,4.5,NA,4.666666667,5,4.666666667,NA,4,4,4,NA,4.5,4.5,5,51,I am not willing to participate in the interview,8,14
+wjy8,,NA,NA,4,3.5,NA,NA,4,3,NA,NA,3.666666667,3.333333333,NA,NA,3,3,63,I am not willing to participate in the interview,11,20
+dh557,,NA,NA,NA,2.5,NA,NA,NA,3,NA,NA,NA,2.666666667,NA,NA,NA,2,33,I am not willing to participate in the interview,4,2
+sh835,,4,3.75,NA,5,4,4.5,NA,5,2.666666667,2.666666667,NA,4,3.5,3.75,NA,5,49,I am not willing to participate in the interview,9,16
+jty26,,4,4,NA,4,4,4,NA,4,4,3.666666667,NA,3.666666667,4,2,NA,3,64,I am willing to participate in the interview and will receive a $10 Amazon card,5,12
+pa292,,NA,4.5,5,4.5,NA,3.333333333,4.333333333,4.333333333,NA,4.333333333,4.333333333,4.333333333,NA,3.5,5,3.5,106,I am willing to participate in the interview and will receive a $10 Amazon card,7,12
+als475,,3,NA,4,4,4,NA,4.333333333,4.666666667,4,NA,4,4,2,NA,3,3,52,I am willing to participate in the interview and will receive a $10 Amazon card,8,18
+psp42,,4,5,NA,5,4.333333333,5,NA,5,4.333333333,4.333333333,NA,5,4,5,NA,5,110,I am willing to participate in the interview and will receive a $10 Amazon card,12,16
+kra38,,NA,NA,NA,4.5,NA,NA,NA,4.666666667,NA,NA,NA,4.333333333,NA,NA,NA,4.5,16,"I am willing to participate in the interview and a ""thank you"" is enough",2,1
+zrr5,,5,5,NA,5,4.666666667,5,NA,3.333333333,4.666666667,5,NA,4.666666667,5,4,NA,5,150,I am willing to participate in the interview and will receive a $10 Amazon card,11,14
+yl3498,,4.5,NA,5,4.5,5,NA,5,5,4.333333333,NA,3.666666667,4.333333333,4.5,NA,5,5,85,I am willing to participate in the interview and will receive a $10 Amazon card,10,16
+rmg294,,5,5,4.5,5,5,5,5,4.666666667,4.666666667,4.333333333,4,4,4,4,4,1.5,30,I am willing to participate in the interview and will receive a $10 Amazon card,4,4
+yh462,,4,NA,NA,3.5,4.333333333,NA,NA,4.333333333,4,NA,NA,4,4,NA,NA,4.5,36,I am not willing to participate in the interview,3,4
+lz429,,NA,NA,NA,4.5,NA,NA,NA,4.333333333,NA,NA,NA,4,NA,NA,NA,4,74,"I am willing to participate in the interview and a ""thank you"" is enough",5,8
