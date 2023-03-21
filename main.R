@@ -189,7 +189,7 @@ unique(dat.fil$usernetid)
 #########################################
 #########################################
 #########################################
-setwd("C:/Users/zhuwa/Desktop/Fall2022/DEA1500/log-survey")
+
 library(stats)
 library(dplyr)
 library(ggplot2)
@@ -362,8 +362,16 @@ corrplot(M, type = "upper", order = "hclust",
 ####################################
 ####################################
 
+
 post <- read.csv("surveyapp_todo.csv")
-post$user_id <- factor(post$user_id)
+##multi users --> 1 email
+##combine all different user_id to the same one if they belong to the same email
+useremail <- read.csv("user.csv")
+uniquetable <- useremail[!duplicated(useremail$email),c('id','email')]
+post <- post %>% 
+  left_join(uniquetable,by=c('user_id' = 'id'))
+
+post$user_id <- factor(post$email)
 post$created <- as.POSIXct(post$created,format="%Y-%m-%d %H:%M:%S",tz=Sys.timezone())
 
 # Choose 27 as log metric; emotional engagement as survey metric
@@ -406,21 +414,22 @@ Late_leaver <- Leaver[!(Leaver %in% Early_leaver)]
 
 user$id <- as.numeric(user$id)
 dat.log <- read.csv("log_log.csv")
+dat.log <- dat.log %>% 
+  left_join(uniquetable,by=c('user_id' = 'id'))
+
 dat.log$trigger_time <- as.POSIXct(dat.log$trigger_time,format="%Y-%m-%d %H:%M:%S",tz=Sys.timezone())
-ELnetid <- gsub(" ", "", tolower(gsub("@.*","",user$email[user$id %in% Early_leaver])))
-Lnetid <- gsub(" ", "", tolower(gsub("@.*","",user$email[user$id %in% Leaver])))
-LLnetid <- gsub(" ", "", tolower(gsub("@.*","",user$email[user$id %in% Late_leaver])))
+ELnetid <- gsub(" ", "", tolower(gsub("@.*","",Early_leaver)))
+Lnetid <- gsub(" ", "", tolower(gsub("@.*","",Leaver)))
+LLnetid <- gsub(" ", "", tolower(gsub("@.*","",Late_leaver)))
 
 ###TIME 1
 
-df.log <- dat.log %>% 
+df.log1 <- dat.log %>% 
   filter(trigger_time < t1) %>% 
-  group_by(user_id) %>% 
+  group_by(email) %>% 
   filter(event == 27) %>% 
-  summarise(log_27 = n()) %>% 
-  left_join(user, by=c('user_id' = 'id')) %>% 
-  select(log_27,email)
-df.log$email <- gsub(" ", "", tolower(gsub("@.*","",df.log$email)))
+  summarise(log_27 = n()) 
+df.log1$email <- gsub(" ", "", tolower(gsub("@.*","",df.log1$email)))
 
 
 dat.e1<- read.csv("engagement1_February+25,+2023_14.26.csv",na.strings=c("NA","NaN", ""))
@@ -432,25 +441,26 @@ df.survey <- eng1
 df.survey <- df.survey[!duplicated(df.survey$usernetid),]
 
 
-dat.com <- df.log %>% 
+dat.com <- df.log1 %>% 
   left_join(df.survey, by=c('email' = 'usernetid')) %>% 
+  filter(!is.na(email) & email != "") %>% 
   select(email, log_27, emo,soc,be,cog)
 #dat.com$cat <- ifelse(dat.com$email %in% ELnetid, 'L','P')
 dat.com$cat <- ifelse(dat.com$email %in% Lnetid, ifelse(dat.com$email %in% LLnetid, 'LL','EL'),'P')
+dat1 <- dat.com
 dat.com %>% 
   group_by(cat) %>% 
   summarise(n = n(),log = mean(log_27),emo = mean(emo,na.rm = TRUE),soc = mean(soc,na.rm = TRUE),be = mean(be,na.rm = TRUE),cog = mean(cog,na.rm = TRUE))
 
 ###TIME 2
 
-df.log <- dat.log %>% 
+df.log2 <- dat.log %>% 
   filter(trigger_time < t2) %>% 
-  group_by(user_id) %>% 
+  group_by(email) %>% 
   filter(event == 27) %>% 
-  summarise(log_27 = n()) %>% 
-  left_join(user, by=c('user_id' = 'id')) %>% 
-  select(log_27,email)
-df.log$email <- gsub(" ", "", tolower(gsub("@.*","",df.log$email)))
+  summarise(log_27 = n()) 
+
+df.log2$email <- gsub(" ", "", tolower(gsub("@.*","",df.log2$email)))
 
 dat.e2<- read.csv("engagement2_March+3,+2023_15.01.csv",na.strings=c("NA","NaN", ""))
 eng2 <- surveyave(dat.e2)
@@ -459,15 +469,19 @@ eng2$usernetid <- gsub(" ", "", tolower(gsub("@.*","",eng2$usernetid)))
 df.survey <- eng2
 df.survey <- df.survey[!duplicated(df.survey$usernetid),]
 
-dat.com <- df.log %>% 
+dat.com <- df.log2 %>% 
   left_join(df.survey, by=c('email' = 'usernetid')) %>% 
+  filter(!is.na(email) & email != "") %>% 
   select(email, log_27, emo,soc,be,cog)
 dat.com$cat <- ifelse(dat.com$email %in% Lnetid, ifelse(dat.com$email %in% LLnetid, 'LL','EL'),'P')
+dat2 <- dat.com
 dat.com %>% 
   group_by(cat) %>% 
   summarise(n = n(),log = mean(log_27),emo = mean(emo,na.rm = TRUE),soc = mean(soc,na.rm = TRUE),be = mean(be,na.rm = TRUE),cog = mean(cog,na.rm = TRUE))
 
-
+dat2[!(dat2$email %in% dat1$email),'email']
+dat1[!(dat1$email %in% dat2$email),'email']
+View(useremail)
 ####################################
 ####################################
 ######CORRELATION BY DIFFERENT USERS
