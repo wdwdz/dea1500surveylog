@@ -594,3 +594,18 @@ h<-fa.promax$loadings
 fa.diagram(fa.promax,simple =TRUE)
 # Cronbach alpha
 alpha(envi_EFA2[,c(18:21)])
+
+testdata <- read.csv("shinylog.csv")
+testdata %>% ggplot(aes(event)) +
+  geom_histogram()
+  
+dat.log$trigger_time <- as.POSIXct(dat.log$trigger_time,format="%Y-%m-%d %H:%M:%S",tz=Sys.timezone())
+dat.log$trigger_day <- as.Date(dat.log$trigger_time)
+dat.log %>% 
+  filter(!is.na(email) & email != "") %>% 
+  filter( event == 27) %>% 
+  group_by(trigger_day,email) %>% 
+  summarise(y = n()) %>% 
+  ggplot()+ 
+  geom_point(aes(trigger_day,y),position = position_dodge(0.02))+
+  geom_line(aes(trigger_day,y,group=email),position = position_dodge(0.02))
