@@ -58,13 +58,16 @@ user$id <- factor(user$id)
 dat.log$uid <- factor(dat.log$user_id)
 # log sum by day
 dat.log$day <- as.Date(dat.log$trigger_time)
+
+
 temp <- dat.log %>%
+  filter(event == "26") %>% 
   group_by(day) %>%
-  count
+  summarise(y = n())
 temp <- data.frame(temp)
 str(temp)
 ggplot(data = temp) +
-  geom_line(aes(x = day, y = n))
+  geom_line(aes(x = day, y = y))
 
 dat.log$week <- week(dat.log$day)
 
