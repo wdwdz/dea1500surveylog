@@ -6,6 +6,8 @@ library(tidyr)
 library(rstatix)
 library(lme4)
 library(emmeans)
+library(corrplot)
+library(ggpubr)
 
 #########################################
 ###########HELP FUNCTIONS################
@@ -199,44 +201,9 @@ df.survey3 %>%
   pivot_longer(emo:socbe,names_to = 'eng',values_to = 'result') %>% 
   mutate(time = 't3'))
 
-summary <- dat.ave %>%
-  group_by(eng,time) %>%
-  get_summary_stats(result, type = "mean_ci")
-
-###### PROECESS and VIS
-
-# surveylog <- surveylog %>% 
-#   left_join(df.survey,by='usernetid') %>% 
-#   mutate(
-#     usergroup = ifelse(usernetid %in% Lnetid, ifelse(usernetid %in% LLnetid, 'LL','EL'),'P'),
-#     usergroup2 = ifelse(usernetid %in% Lnetid, 'L','P')
-#   ) 
-# 
-# table(surveylog$usergroup2)
-# 
-# # Only select P (participants) data L (leaver)
-# mat <- surveylog %>% 
-#   filter(usergroup2 == 'L') %>% 
-#   select_if(is.numeric) 
-# 
-# mat <- mat[, colSums(mat) != 0]
-# 
-# M <- cor(mat)
-# p.mat <- cor.mtest(mat)
-# #p.mat <- p.adjust(p.mat, method = "BH")
-# #colnames(p.mat) <- rownames(p.mat) <- colnames(mat)
-# corrplot(M, type = "upper", order = "hclust", 
-#          p.mat = p.mat, sig.level = 0.05)
-# 
-# 
-# M <- cor(mat, method = "spearm")
-# p.mat <- cor.mtest(mat, method = "spearm")
-# corrplot(M, type = "upper", order = "hclust", 
-#          p.mat = p.mat, sig.level = 0.05)
-# 
-# 
-
-
+# summary <- dat.ave %>%
+#   group_by(eng,time) %>%
+#   get_summary_stats(result, type = "mean_ci")
 
 not_sel <- c("Not Selected","all")
 
@@ -303,7 +270,7 @@ Survey_page <- tabPanel(
     sidebarPanel(
       title = "Survey",
       selectInput("engage", "engage", choices = c(not_sel)),
-      selectInput("group2", "group2", choices = c('P','EL','LL'),multiple = TRUE),
+      selectInput("group2", "group", choices = c('P','EL','LL'),multiple = TRUE),
       tableOutput("data2")
     ),
     mainPanel(
@@ -328,9 +295,10 @@ LogSurvey_page <- tabPanel(
     sidebarPanel(
       title = "LogSurvey",
       selectInput("time", "time", choices = c(not_sel)),
-      selectInput("group3", "group3", choices = c('P','EL','LL'),multiple = TRUE),
-      selectInput("event", "event", choices = c(not_sel)),
-      selectInput("engage", "engage", choices = c(not_sel)),
+      selectInput("group3", "group", choices = c('P','EL','LL'),multiple = TRUE),
+      selectInput("method","method", choices = c("pearson","spearman")),
+      selectInput("event3", "event", choices = c(not_sel)),
+      selectInput("engage3", "engage", choices = c(not_sel)),
       tableOutput("data3")
       
     ),
@@ -417,21 +385,18 @@ server <- function(input, output, session) {
       mutate(StartDate = as.character(StartDate))
   )
 
+  
   observeEvent(df(),{
-    choices <-c(not_sel,unique(df()$event))
-    updateSelectInput(inputId = "event", choices = choices)
-    
-  })
-  
-  observeEvent(dfsur(),{
-    choices <- c(not_sel,unique(dat.ave$time))
-    updateSelectInput(inputId = "time", choices = choices)
-    
-  })
-  
-  observeEvent(dfsur(),{
-    choices <- c(not_sel,unique(dfsur()$eng))
-    updateSelectInput(inputId = "engage", choices = choices)
+    choices1 <- c(not_sel,unique(dat.ave$time))
+    updateSelectInput(inputId = "time", choices = choices1)
+    choices2 <-c(not_sel,unique(df()$event))
+    updateSelectInput(inputId = "event", choices = choices2)
+    choices3 <- c(not_sel,unique(dfsur()$eng))
+    updateSelectInput(inputId = "engage", choices = choices3)
+    choices4 <-c(not_sel,colnames(surveylog()))
+    updateSelectInput(inputId = "event3", choices = choices4)
+    choices5 <- c(not_sel,unique(dfsur()$eng))
+    updateSelectInput(inputId = "engage3", choices = choices5)
     
   })
   
@@ -470,7 +435,12 @@ server <- function(input, output, session) {
   })
   
   output$plot_ss <- renderPlot({
-    ggplot(summary, aes(x=time, y=mean, group=eng, color=eng))+
+    dfsur() %>%
+      mutate(group= ifelse(usernetid %in% Lnetid,ifelse(usernetid %in% ELnetid, 'EL','LL'),'P')) %>%
+      filter(group %in% input$group2) %>%
+      group_by(eng,time) %>%
+      get_summary_stats(result, type = "mean_ci") %>% 
+      ggplot(aes(x=time, y=mean, group=eng, color=eng))+
       geom_errorbar(aes(ymin=mean-ci, ymax=mean+ci), width=.1, position=position_dodge(width=.3)) +
       geom_point(position=position_dodge(width=.3))+
       geom_line(position=position_dodge(width=.3))
@@ -496,11 +466,14 @@ server <- function(input, output, session) {
   
   surveylog <- reactive({
     if(input$time == 't1')
-      datprocess(df(),dfsurvey1())
+      datprocess(df(),dfsurvey1()) %>% 
+        left_join(dfsurvey1(),by='usernetid')
     else if(input$time == 't2')
-      datprocess(df(),dfsurvey2())
+      datprocess(df(),dfsurvey2()) %>% 
+        left_join(dfsurvey2(),by='usernetid')
     else
-      datprocess(df(),dfsurvey3())
+      datprocess(df(),dfsurvey3()) %>% 
+        left_join(dfsurvey3(),by='usernetid')
       
   })
   
@@ -510,20 +483,35 @@ server <- function(input, output, session) {
   
   output$plot_cs <- renderPlot({
     mat <- surveylog() %>% 
-    #   filter(usergroup2 == 'L') %>% 
+      mutate(group= ifelse(usernetid %in% Lnetid,ifelse(usernetid %in% ELnetid, 'EL','LL'),'P')) %>%
+      filter(group %in% input$group3) %>%
       select_if(is.numeric) 
-    # 
     mat <- mat[, colSums(mat) != 0]
-    # 
-    M <- cor(mat)
-    p.mat <- cor.mtest(mat)
-
-    corrplot(M, type = "upper", order = "hclust", 
-             p.mat = p.mat, sig.level = 0.05)
-    
+    if(input$method == "pearson"){
+      M <- cor(mat)
+      p.mat <- cor.mtest(mat)
+      corrplot(M, type = "upper", order = "hclust", 
+               p.mat = p.mat, sig.level = 0.05)
+    }else{
+      M <- cor(mat, method = "spearm")
+      p.mat <- cor.mtest(mat, method = "spearm")
+      corrplot(M, type = "upper", order = "hclust",
+               p.mat = p.mat, sig.level = 0.05)
+    }
   })
   
+  output$plot_cp <- renderPlot({
+    surveylog() %>% 
+      mutate(group= ifelse(usernetid %in% Lnetid,ifelse(usernetid %in% ELnetid, 'EL','LL'),'P')) %>%
+      filter(group %in% input$group3) %>%
+      ggplot()+
+      geom_point(aes(.data[[input$event3]],.data[[input$engage3]]),position = position_dodge(0.02))+
+      stat_cor(aes(.data[[input$event3]],.data[[input$engage3]]),method = "pearson")
+
+  },res=96)
   
+  
+
   
 }
 
